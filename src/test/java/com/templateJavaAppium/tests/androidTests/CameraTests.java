@@ -24,11 +24,12 @@ public class CameraTests extends TestBase {
 
         homePage.clickMenu();
         menuPage.clickNativeComponentes();
+        nativeComponentsPage.clickSubMenuImgCollection();
         nativeComponentsPage.clickSubMenuContentScrolling();
         nativeComponentsPage.clickSubMenuVideoPlayer();
         nativeComponentsPage.clickSubMenuCamera();
-        cameraPage.waitCamera();
         cameraPage.cameraIsDisplayed();
+        cameraPage.waitCamera();
         Assert.assertTrue(cameraPage.cameraIsDisplayed());
     }
 }

@@ -11,14 +11,14 @@ public class ContentOutViewPage extends PageBase {
 
     @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazonaws.devicefarm.android.referenceapp:id/out_of_content_scrollView\")).scrollIntoView(new UiSelector().text(\"This is hidden text\"))")
     @AndroidFindBy(accessibility = "This is hidden text")
-    private MobileElement hiddenText;
+    private MobileElement text;
 
     public boolean frameIsDisplayed() {
         return returnIfElementIsDisplayed(frame);
     }
 
     public boolean hiddenTextIsDisplayed() {
-        return returnIfElementIsDisplayed(hiddenText);
+        return returnIfElementIsDisplayed(text);
     }
 
     public void waitFrameCarregar(){
