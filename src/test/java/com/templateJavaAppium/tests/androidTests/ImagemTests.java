@@ -5,8 +5,6 @@ import com.templateJavaAppium.pages.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-
 public class ImagemTests extends TestBase {
     ImageCollectionPage imageCollectionPage;
     HomePage homePage;

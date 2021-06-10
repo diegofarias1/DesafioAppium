@@ -4,7 +4,6 @@ import com.templateJavaAppium.bases.TestBase;
 import com.templateJavaAppium.pages.CrashPage;
 import com.templateJavaAppium.pages.HomePage;
 import com.templateJavaAppium.pages.MenuPage;
-import com.templateJavaAppium.utils.DriveFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-## Arquitetura Projeto
+## Arquitetura do Projeto
 
 - Linguagem - [Java 8](https://www.java.com/pt_BR/  "Java 8")
 
@@ -12,15 +12,7 @@
 
   
 
-## Arquitetura
-
-**Premissas de uma boa arquitetura de automação de testes:**
-
-* Facilitar o desenvolvimento dos testes automatizados (reuso).
-
-* Facilitar a manutenção dos testes (refatoração).
-
-* Tornar o fluxo do teste o mais legível possível (fácil entendimento do que está sendo testado).
+## Steps
 
 **Configurações e setup**
 
@@ -30,93 +22,31 @@
 
 
 
+## Metas
 
-  
-  
-  
 
-**Parametrização de variáveis**
+**Android**
 
-  
+- [x] Implementar 25 scripts de testes que manipulem um aplicativo móvel Android com Page Objects.
+- [x] Alguns scripts devem ler dados de uma planilha Excel para implementar Data-Driven.
+- [x] Notem que 25 scripts podem cobrir mais de 25 casos de testes se usarmos Data-Driven. Em outras palavras, implementar 25 CTs usando data-driven não é a mesma coisa que implementar 25 scripts.
+- [x] Os casos de testes precisam ser executados em simulador e em um device real.
 
-Para os parâmetros do appium, credenciais, servidor, devices e demais, utilize o arquivo **globalParameters.properties**:
+**Device Farm e Relatórios**
 
-  
+- [x] Gravar screenshots ou vídeos automaticamente dos casos de testes.
+- [x] O projeto deverá gerar um relatório de testes automaticamente com screenshots ou vídeos embutidos. Sugestões: Allure Report ou ExtentReport.
+- [x] Executar os testes em uma device farm .
 
-![alt text](https://i.imgur.com/FESL5Yr.png)
+## Conclusão
+* Foi realizado alguns testes manipulando um dispositovo Android.
 
-**Utilizar novo aplicativo para ser testado**
+* Utilizado o device farm BrowserStack.
 
-- No diretório "resources/app" existem duas pastas: "android" e "ios". Utilize tais pastas para armazenar os arquivos do aplicativo (.apk, .ipa)
+* Utilizando a arquitetura rodei os testes em Devices emulados e fisicos, além do farm.
 
-![alt text](https://imgur.com/c75q6dW.png)
+* Só isso mesmo
 
-**Flows**
 
-Flows ou fluxos, é a camada onde há um agrupamento de atividades, ações e validações para determinada página do sistema. Um exemplo prático é um fluxo de realizarLoginAmbienteTesteZero onde são necessárias quatro ações de preencherLogin, preencherSenha, clicarBotaoLogin e selecionar o ambiente. A utilidade é facilitar o reuso de ações.
 
-**Pages**
-
-Mapeamento dos elementos bem como as ações simples que podem ser através do Flows.
-
-![alt text](https://i.imgur.com/LXFW5LB.png)
-
-OBS: Com a utilizacao do [AppiumFieldDecorator](https://appium.github.io/java-client/io/appium/java_client/pagefactory/AppiumFieldDecorator.html"AppiumFieldDecorator") é possivel utilizar os recursos de "@AndroidFindBy" e "@iOSFindBy" podendo assim, utilizar diferentes formas de localização de um elemento dependendo do sistema operacional utilizado pelo device.
-
-Isso faz com que seja possivel utilizar uma mesma Page tanto para ios quanto para android na grande maioria dos casos.
-
-Maiores informações: [Appium Page-objects](https://github.com/appium/java-client/blob/master/docs/Page-objects.md  "Appium Page-objects")
-
-**Bases**
-
-Camada subdivida em duas classes principais:
-
--  **TestBase** - Classe responsável por iniciar e finalizar o servidor Appium, os reports e os drivers para testes envolvendo dispositivos Android e iOS
-
--  **PageBase** - Classe responsável por ter métodos genéricos de ações em MobileElements, ListMobileElements e WebElements.
-
-**Utils**
-
-  
-
-Camada ligada ao core da arquitetura subdivida em três em classes principais:
-
-- DriverFactory - classe com instância do driver bem como a escolha do sistema operacional mobile e configurações que serão utilizadas. Utilize os parâmetros no arquivo **globalParameters.properties** confome a sua forma de execução:
-
-  
-
-![enter image description here](https://i.imgur.com/Pxd31to.png)
-
-  
-
-Arquivo DriverFactory para execuções:
-
-Permite executar testes Android:
-
-- Device real Local utilizando o apk
-
-- Device real Local utilizando aplicativo já instalado
-
-- Device farm BrowserStack
-
-Permite executar testes iOS:
-
-- Device real Local utilizando o IPA com Appium Studio
-
-- Device real Local utilizando o IPA com Appium (sistema operacional Mac OS)
-
-- Device farm BrowserStack
-
-![alt text](https://i.imgur.com/rvoTMuJ.png)
-
-  
-
-Dicas de capabilities:
-
-[Appium Desired Capabilities](http://appium.io/docs/en/writing-running-appium/caps/  "Appium Desired Capabilities")
-
-[Appium Desired Capabilities by Cloud Grey](https://caps.cloudgrey.io/  "Appium Desired Capabilities by Cloud Grey")
-
-- Utils - métodos genéricos que podem ser usados durante qualquer parte de um teste.
-
-- ExtentReportsHelpers - métodos referentes ao relatório de execução dos testes automatizados. Toda execução de teste automatizado provê um resultado e screenshots que são armazenados na pasta dos binários Reports;
+![alt text](https://i.ibb.co/MyTnCVh/Capturar.png)

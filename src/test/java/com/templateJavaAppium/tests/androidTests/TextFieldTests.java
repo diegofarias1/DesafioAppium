@@ -8,7 +8,6 @@ import com.templateJavaAppium.pages.MenuPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class TextFieldTests extends TestBase {
     TextFieldPage textFieldPage;
     HomePage homePage;

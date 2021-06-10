@@ -6,7 +6,6 @@ import com.templateJavaAppium.utils.ExcelUtils;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 
 
