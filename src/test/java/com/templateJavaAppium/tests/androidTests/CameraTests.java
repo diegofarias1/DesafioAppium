@@ -16,7 +16,7 @@ public class CameraTests extends TestBase {
     NativeComponentsPage nativeComponentsPage;
 
     @Test
-    public void verificarFuncionamentoCamera() {
+    public void ShouldVerifyOpenCamera() {
         homePage = new HomePage();
         menuPage = new MenuPage();
         cameraPage = new CameraPage();

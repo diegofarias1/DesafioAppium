@@ -16,8 +16,7 @@ public class RadioTests extends TestBase {
 
 
     @Test
-    public void checkRadioAmazon() {
-
+    public void shouldCheckRadioAmazon() {
         radioButtonsPage = new RadioButtonsPage();
         homePage = new HomePage();
         menuPage = new MenuPage();
@@ -29,13 +28,11 @@ public class RadioTests extends TestBase {
         inputControlPage.clickCheckBox();
         inputControlPage.clickRadioButtons();
         radioButtonsPage.clickRadioAmazon();
-
         Assert.assertEquals(radioButtonsPage.getRadioText(), "Amazon");
-
     }
 
     @Test
-    public void CheckRadioWeb() {
+    public void shouldCheckRadioWeb() {
         radioButtonsPage = new RadioButtonsPage();
         homePage = new HomePage();
         menuPage = new MenuPage();
@@ -47,12 +44,11 @@ public class RadioTests extends TestBase {
         inputControlPage.clickCheckBox();
         inputControlPage.clickRadioButtons();
         radioButtonsPage.clickRadioWeb();
-
         Assert.assertEquals(radioButtonsPage.getRadioText(), "Web");
     }
 
     @Test
-    public void CheckRadioServices() {
+    public void shouldCheckRadioServices() {
         radioButtonsPage = new RadioButtonsPage();
         homePage = new HomePage();
         menuPage = new MenuPage();

@@ -15,7 +15,7 @@ public class LoginTests extends TestBase {
     ExcelUtils excelUtils;
 
     @DataProvider(name = "Users")
-    public Object[][] loginValidoXlsx() throws Exception {
+    public Object[][] loginDDT() throws Exception {
 
         excelUtils = new ExcelUtils(System.getProperty("user.dir") + "\\src\\test\\java\\com\\templateJavaAppium\\resources\\app\\arquivodelogins.xlsx", "usuarios");
         ArrayList<Object[]> dataList = new ArrayList<Object[]>();
@@ -25,8 +25,8 @@ public class LoginTests extends TestBase {
         while (i < totalRows) {
             Object[] dataLine = new Object[2];
 
-            dataLine[0] = excelUtils.getCell(i, 0);// nome
-            dataLine[1] = excelUtils.getCell(i, 1);// senha
+            dataLine[0] = excelUtils.getCell(i, 0);
+            dataLine[1] = excelUtils.getCell(i, 1);
 
             dataList.add(dataLine);
             i++;
@@ -40,31 +40,31 @@ public class LoginTests extends TestBase {
 
 
     @Test(dataProvider = "Users")
-    public void loginInvalido(String nome, String senha) {
+    public void ShouldInsertLoginSucessfullDDT(String username, String password) {
         loginFlows = new LoginFlows();
         loginFlows.goToLoginPage();
-        String message = loginFlows.login(nome, senha);
-        Assert.assertEquals("You gave me the wrong username and password", message);
+        String loginMessage = loginFlows.login(username, password);
+        Assert.assertEquals("You gave me the wrong username and password", loginMessage);
     }
 
     @Test
-    public void ShouldLoginSucessfull() {
+    public void ShouldInsertLoginSucessfull() {
         String username = "admin";
         String password = "password";
         loginFlows = new LoginFlows();
         loginFlows.goToLoginPage();
-        String message = loginFlows.login(username, password);
-        Assert.assertEquals("You are logged on as admin", message);
+        String loginMessage = loginFlows.login(username, password);
+        Assert.assertEquals("You are logged on as admin", loginMessage);
     }
 
     @Test
-    public void RealizarLoginSemSucesso() {
+    public void ShouldInsertLoginInvalid() {
         String username = "admin";
         String password = "123456";
 
         loginFlows = new LoginFlows();
         loginFlows.goToLoginPage();
-        String message = loginFlows.login(username, password);
-        Assert.assertEquals("You gave me the wrong username and password", message);
+        String loginMessage = loginFlows.login(username, password);
+        Assert.assertEquals("You gave me the wrong username and password", loginMessage);
     }
 }

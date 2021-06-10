@@ -21,17 +21,8 @@ public class AlertsPage extends PageBase {
     @AndroidFindBy(xpath = "//android.widget.Toast[1]")
     private MobileElement messageToast;
 
-    public String returnMensagemToast() {
-        return getText(messageToast);
-    }
-
     public void clickAlert() {
         click(AlertBtn);
-    }
-
-    public void clickToast() {
-        click(ToastAlertBtn);
-
     }
 
     public String returnMessageText() {

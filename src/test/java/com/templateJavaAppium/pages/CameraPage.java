@@ -6,7 +6,6 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class CameraPage extends PageBase {
 
-   //@AndroidFindBy(accessibility = "Camera Preview Streaming")
     @AndroidFindBy(id = "com.amazonaws.devicefarm.android.referenceapp:id/camera_surface_view")
     private MobileElement cameraView;
 

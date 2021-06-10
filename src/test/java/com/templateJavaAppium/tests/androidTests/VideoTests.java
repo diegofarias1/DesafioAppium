@@ -13,12 +13,11 @@ public class VideoTests extends TestBase {
     VideoPlayerPage videoPlayerPage;
 
     @Test
-    public void verificarFuncionamentoVideo() {
+    public void shouldVerifyOperationVideo() {
         homePage = new HomePage();
         menuPage = new MenuPage();
         cameraPage = new CameraPage();
         videoPlayerPage = new VideoPlayerPage();
-
         nativeComponentsPage = new NativeComponentsPage();
 
         homePage.clickMenu();

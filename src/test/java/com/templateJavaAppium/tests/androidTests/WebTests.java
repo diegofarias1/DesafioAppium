@@ -13,7 +13,7 @@ public class WebTests extends TestBase {
     private WebPage webPage;
 
     @Test
-    public void navegarParaPaginaWeb() {
+    public void shouldNavigateWebPage() {
         homePage = new HomePage();
         menuPage = new MenuPage();
         webPage = new WebPage();
@@ -26,7 +26,7 @@ public class WebTests extends TestBase {
     }
 
     @Test
-    public void navegarWebDentroDaAplicacao() {
+    public void shouldNavigateWebPageWithAppBrowser() {
         homePage = new HomePage();
         menuPage = new MenuPage();
         webPage = new WebPage();

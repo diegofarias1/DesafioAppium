@@ -1,7 +1,6 @@
 package com.templateJavaAppium.pages.InputPages;
 
 import com.templateJavaAppium.bases.PageBase;
-
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 

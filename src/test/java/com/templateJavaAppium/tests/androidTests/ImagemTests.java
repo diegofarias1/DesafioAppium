@@ -14,8 +14,7 @@ public class ImagemTests extends TestBase {
     NativeComponentsPage nativeComponentsPage;
 
     @Test
-    public void checkIImageGalleryDisplayed() {
-
+    public void shouldCheckImageGallery() {
         homePage = new HomePage();
         imageCollectionPage = new ImageCollectionPage();
         menuPage = new MenuPage();

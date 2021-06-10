@@ -21,12 +21,8 @@ public class ContentOutViewPage extends PageBase {
         return returnIfElementIsDisplayed(text);
     }
 
-    public void waitFrameCarregar(){
+    public void waitFrameCarregar() {
         waitForElement(frame);
-    }
-
-    public void scrollDownIos(){
-        scrolling("down");
     }
 
 }

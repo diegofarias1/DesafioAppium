@@ -11,7 +11,7 @@ public class FixtureTests extends TestBase {
     MenuPage menuPage;
 
     @Test
-    public void verificarStatusNFC() {
+    public void shouldVerifyStatusNFC() {
 
         String status = "true|false";
         fixturePage = new FixturePage();
@@ -25,7 +25,7 @@ public class FixtureTests extends TestBase {
     }
 
     @Test
-    public void verificarStatusBlutooth() {
+    public void shouldVerifyStatusBlutooth() {
 
         String status = "true|false";
 
@@ -40,7 +40,7 @@ public class FixtureTests extends TestBase {
     }
 
     @Test
-    public void verificaValorLat() {
+    public void shouldVerifyLatitudeValue() {
 
         fixturePage = new FixturePage();
         homePage = new HomePage();
@@ -52,7 +52,7 @@ public class FixtureTests extends TestBase {
     }
 
     @Test
-    public void verificarStatusWiFi() {
+    public void shouldVerifyStatusInternet() {
 
         String status = "true|false";
         fixturePage = new FixturePage();
@@ -65,7 +65,7 @@ public class FixtureTests extends TestBase {
     }
 
     @Test
-    public void verificaValorLog() {
+    public void shouldVerifyLongValue() {
 
         fixturePage = new FixturePage();
         homePage = new HomePage();
@@ -77,7 +77,7 @@ public class FixtureTests extends TestBase {
     }
 
     @Test
-    public void verificarStatusGps() {
+    public void shouldVerifyStatusGPS() {
 
         String status = "true|false";
 

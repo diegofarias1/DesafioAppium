@@ -1,6 +1,10 @@
-package com.templateJavaAppium.pages;
+package com.templateJavaAppium.tests.androidTests;
 
 import com.templateJavaAppium.bases.TestBase;
+import com.templateJavaAppium.pages.ContentOutViewPage;
+import com.templateJavaAppium.pages.HomePage;
+import com.templateJavaAppium.pages.MenuPage;
+import com.templateJavaAppium.pages.NativeComponentsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

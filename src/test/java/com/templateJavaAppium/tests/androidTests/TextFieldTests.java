@@ -15,7 +15,7 @@ public class TextFieldTests extends TestBase {
     MenuPage menuPage;
 
     @Test
-    public void inserirtexto() {
+    public void shouldInsertText() {
         String text = "Diego";
         textFieldPage = new TextFieldPage();
         homePage = new HomePage();
@@ -24,20 +24,17 @@ public class TextFieldTests extends TestBase {
         homePage.clickMenu();
         menuPage.clickInputControls();
         textFieldPage.sendText(text);
-
         Assert.assertEquals("Diego", textFieldPage.verificarTexto());
     }
 
     @Test
-    public void verificarCampoVazio() {
-
+    public void shouldVerifyFieldEmpty() {
         textFieldPage = new TextFieldPage();
         homePage = new HomePage();
         menuPage = new MenuPage();
 
         homePage.clickMenu();
         menuPage.clickInputControls();
-
         Assert.assertEquals("Enter Text", textFieldPage.verificarTexto());
     }
 }

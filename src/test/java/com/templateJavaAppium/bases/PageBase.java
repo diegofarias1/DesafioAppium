@@ -7,7 +7,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -23,11 +22,13 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+import com.aventstack.extentreports.ExtentTest;
 
 
 public class PageBase {
 
     //Variaveis globals
+    private static ExtentTest log;
     protected AppiumDriver driver = null;
     protected WebDriverWait wait = null;
     protected JavascriptExecutor javaScriptExecutor = null;
@@ -174,6 +175,12 @@ public class PageBase {
         waitForElement(element);
         String text = element.getText();
         ExtentReportUtils.addTestInfo(3, "PARAMETER: " + text);
+        return text;
+    }
+    protected String obterTexto(MobileElement element){
+        String metodoChamada = Thread.currentThread().getStackTrace()[2].getMethodName();
+        waitForElement(element);
+        String text = element.getText();
         return text;
     }
 
@@ -414,5 +421,6 @@ public class PageBase {
                 .moveTo(PointOption.point(x, end_y)).release().perform();
 
     }
+
     //endregion General Methods
 }

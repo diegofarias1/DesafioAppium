@@ -15,17 +15,14 @@ public class ContentScrollingTests extends TestBase {
     NativeComponentsPage nativeComponentsPage;
 
     @Test
-    public void testScroll() {
+    public void shouldRunScrollSucess() {
 
         homePage = new HomePage();
         menuPage = new MenuPage();
-
         contentScrollingPage = new ContentScrollingPage();
         nativeComponentsPage = new NativeComponentsPage();
 
-
         homePage.clickMenu();
-
         menuPage.clickNativeComponentes();
         nativeComponentsPage.clickSubMenuImgCollection();
         nativeComponentsPage.clickSubMenuContentScrolling();

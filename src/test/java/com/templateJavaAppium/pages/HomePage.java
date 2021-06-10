@@ -24,12 +24,6 @@ public class HomePage extends PageBase {
     @AndroidFindBy(accessibility = "Homepage Headline")
     private MobileElement textHome;
 
-    public String getTextHome(){
-        return getText(textHome);
-    }
-
-
-
     public String returnTextHomePage() {
         return getText(MensagemHome);
     }

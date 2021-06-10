@@ -15,7 +15,7 @@ public class AlertsTests extends TestBase {
     private AlertsPage alertsPage;
 
     @Test
-    public void validarMensagemAlerta() {
+    public void ShouldValidateAlertMessege() {
         homePage = new HomePage();
         menuPage = new MenuPage();
         alertsPage = new AlertsPage();

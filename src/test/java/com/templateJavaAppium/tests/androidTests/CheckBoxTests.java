@@ -15,7 +15,7 @@ public class CheckBoxTests extends TestBase {
     InputControlPage inputControlPage;
 
     @Test
-    public void VerificaCheckBoxHabilitado() {
+    public void shouldVefifyCheckBoxAble() {
         checkBoxPage = new CheckBoxPage();
         homePage = new HomePage();
         menuPage = new MenuPage();
@@ -31,7 +31,7 @@ public class CheckBoxTests extends TestBase {
     }
 
     @Test
-    public void VerificaCheckBoxDesabilitado() {
+    public void shouldVefifyCheckBoxDisable() {
         checkBoxPage = new CheckBoxPage();
         homePage = new HomePage();
         menuPage = new MenuPage();
