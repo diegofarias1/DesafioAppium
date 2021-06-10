@@ -9,8 +9,8 @@ public class ContentScrollingPage extends PageBase {
     @AndroidFindBy(className = "android.widget.ScrollView")
     private MobileElement scrollView;
 
-    public void scrollDownAndroid() {
-        scroll(0.9, 0.1);
+    public void scrollDown() {
+        scroll(0.5, 0.1);
     }
 
     public boolean scrollViewDisplayed() {
@@ -20,6 +20,4 @@ public class ContentScrollingPage extends PageBase {
     public void waitScrollDisplayed() {
         waitForElement(scrollView);
     }
-
-
 }

@@ -10,7 +10,7 @@ public class ContentOutViewPage extends PageBase {
     private MobileElement frame;
 
     @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazonaws.devicefarm.android.referenceapp:id/out_of_content_scrollView\")).scrollIntoView(new UiSelector().text(\"This is hidden text\"))")
-    @AndroidFindBy(accessibility = "This is hidden text")
+    @AndroidFindBy(xpath = "//*[@class='android.widget.TextView' and @text='This is hidden text']")
     private MobileElement text;
 
     public boolean frameIsDisplayed() {

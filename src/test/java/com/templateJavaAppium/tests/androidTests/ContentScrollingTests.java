@@ -15,7 +15,7 @@ public class ContentScrollingTests extends TestBase {
     NativeComponentsPage nativeComponentsPage;
 
     @Test
-    public void shouldRunScrollSucess() {
+    public void shouldViewScrollSucess() {
 
         homePage = new HomePage();
         menuPage = new MenuPage();
@@ -27,7 +27,7 @@ public class ContentScrollingTests extends TestBase {
         nativeComponentsPage.clickSubMenuImgCollection();
         nativeComponentsPage.clickSubMenuContentScrolling();
         contentScrollingPage.waitScrollDisplayed();
-        contentScrollingPage.scrollDownAndroid();
+        contentScrollingPage.scrollDown();
         Assert.assertTrue(contentScrollingPage.scrollViewDisplayed());
 
     }

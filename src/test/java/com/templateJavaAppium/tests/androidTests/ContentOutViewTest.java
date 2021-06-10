@@ -15,7 +15,7 @@ public class ContentOutViewTest extends TestBase {
     ContentOutViewPage contentOutViewPage;
 
         @Test
-        public void visualizarFrame() {
+        public void ShouldVisibleFrame() {
 
             homePage = new HomePage();
             menuPage = new MenuPage();
@@ -32,14 +32,13 @@ public class ContentOutViewTest extends TestBase {
             contentOutViewPage.frameIsDisplayed();
             contentOutViewPage.waitFrameCarregar();
 
-
             contentOutViewPage.waitFrameCarregar();
             Assert.assertTrue(contentOutViewPage.hiddenTextIsDisplayed());
 
         }
 
         @Test
-        public void visualizarHiddenText() {
+        public void ShouldVerifyHiddenText() {
 
             homePage = new HomePage();
             menuPage = new MenuPage();
@@ -55,9 +54,7 @@ public class ContentOutViewTest extends TestBase {
             nativeComponentsPage.clickSubMenuContentOutView();
             contentOutViewPage.hiddenTextIsDisplayed();
 
-
             Assert.assertTrue(contentOutViewPage.hiddenTextIsDisplayed());
 
         }
-
     }
